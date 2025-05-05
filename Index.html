@@ -1,0 +1,99 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Mall Web Application</title>
+  <!-- Firebase SDKs (Frontend only placeholders) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Super Mall</h1>
+      <nav class="nav-links">
+        <a href="#login">Login</a>
+        <a href="#shops">Manage Shops</a>
+        <a href="#offers">Offers</a>
+        <a href="#categories">Categories</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Login Module -->
+  <section id="login" class="module">
+    <div class="container">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Sign In</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Create & Manage Shop Details -->
+  <section id="shops" class="module">
+    <div class="container">
+      <h2>Create / Manage Shop Details</h2>
+      <form id="shop-form">
+        <label for="shop-name">Shop Name:</label>
+        <input type="text" id="shop-name" required>
+        <label for="location">Location / Floor:</label>
+        <input type="text" id="location" required>
+        <button type="submit">Save Shop</button>
+      </form>
+      <div id="shop-list"></div>
+    </div>
+  </section>
+
+  <!-- Manage Offers -->
+  <section id="offers" class="module">
+    <div class="container">
+      <h2>Manage Offer Details</h2>
+      <form id="offer-form">
+        <label for="offer-shop">Shop:</label>
+        <select id="offer-shop"></select>
+        <label for="offer-desc">Offer Description:</label>
+        <input type="text" id="offer-desc" required>
+        <label for="offer-expiry">Expiry Date:</label>
+        <input type="date" id="offer-expiry" required>
+        <button type="submit">Save Offer</button>
+      </form>
+      <div id="offer-list"></div>
+    </div>
+  </section>
+
+  <!-- Categories & Floors -->
+  <section id="categories" class="module">
+    <div class="container">
+      <h2>Manage Categories & Floors</h2>
+      <form id="category-form">
+        <label for="category-name">Category Name:</label>
+        <input type="text" id="category-name" required>
+        <label for="floor-number">Floor Number:</label>
+        <input type="text" id="floor-number" required>
+        <button type="submit">Save Category</button>
+      </form>
+      <div id="category-list"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Super Mall Web Application. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
